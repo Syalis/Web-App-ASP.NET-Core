@@ -1,4 +1,4 @@
-﻿
+﻿@model DataPaginador<TCategoria>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -23,11 +23,11 @@
             <div class="modal-body">
                 <div class="form-horizontal">
                     <div class="form-group">
-                        @*<label asp-for="TCategoria.Nombre" class="col-md-2 control-label"></label>
+                        <label asp-for="Input.Nombre" class="col-md-2 control-label"></label>
                         <div class="col-md-10">
-                            <input asp-for="TCategoria.Nombre" placeholder="Nombre" class="form-control"/>
-                            <span asp-validation-for="TCategoria.Nombre" class="text-danger"></span>
-                        </div>*@
+                            <input asp-for="Input.Nombre" placeholder="Nombre" class="form-control"/>
+                            <span asp-validation-for="Input.Nombre" class="text-danger"></span>
+                        </div>
                     </div>
                 </div>
             </div>
