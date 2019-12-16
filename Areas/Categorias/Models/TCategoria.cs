@@ -14,7 +14,7 @@ namespace ProyectoWeb.Areas.Categorias.Models
         [Required(ErrorMessage = "El campo descripción es obligatorio.")]
         public string Descripcion { get; set; }
         public Boolean Estado { get; set; } = true;
-        public ICollection<TCursos> Cursos { get; set; }
+        //public ICollection<TCursos> Cursos { get; set; }
 
     }
 }

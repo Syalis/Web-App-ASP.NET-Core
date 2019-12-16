@@ -9,7 +9,7 @@ namespace ProyectoWeb.Areas.Categorias.Controllers
     [Area("Categorias")]
     public class CategoriasController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Categoria()
         {
             return View();
         }
