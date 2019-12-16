@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ProyectoWeb.Areas.Categorias.Models;
@@ -13,6 +14,7 @@ using SistemasWeb.Data;
 namespace ProyectoWeb.Areas.Categorias.Controllers
 {
     [Area("Categorias")]
+    [Authorize]
     public class CategoriasController : Controller
     {
         private TCategoria _categoria;
@@ -25,7 +27,6 @@ namespace ProyectoWeb.Areas.Categorias.Controllers
             _signInManager = signInManager;
             _lcategorias = new LCategorias(context);
         }
-
 
         public IActionResult Categoria()
         {
@@ -41,7 +42,12 @@ namespace ProyectoWeb.Areas.Categorias.Controllers
             {
                 return RedirectToAction(nameof(HomeController.Index), "Home");
             }
+        }
 
+        [HttpPost]
+        public IActionResult GetCategorias(DataPaginador<TCategoria> model)
+        {
+            return View();
         }
     }
 
